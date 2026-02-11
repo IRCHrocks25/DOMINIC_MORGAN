@@ -5,32 +5,32 @@ import { Button } from './ui/button';
 const statistics = [
   {
     percentage: '68%',
-    description: 'professionals say they\'re not living in alignment with their core values',
-    source: 'European Values Study, 2025',
+    description: 'Of Europeans say they\'re not living in alignment with their core values',
+    source: 'European Values Study, 2023',
   },
   {
     percentage: '63%',
-    description: 'professionals are hiding parts of themselves at work due to societal beliefs, feelings, or aspects of their identity.',
-    source: 'Deloitte and Newnomics, 2025',
+    description: 'Of employees report hiding parts of themselves at work including beliefs, feelings, or aspects of their identity.',
+    source: 'Randstad Workmonitor 2025',
   },
   {
     percentage: '+20%',
-    description: 'increase in "meaning" among successful employees in just two years',
+    description: 'Rise in "quiet quitting" among successful employees in just two years',
     source: 'LinkedIn Workforce Report, 2024',
   },
   {
     percentage: '50%',
-    description: 'professionals report feeling chronically stressed',
+    description: 'Of executives report feeling chronically stressed',
     source: 'American Psychological Association, 2024',
   },
   {
     percentage: '40%',
-    description: 'professionals feel unfulfilled despite career success',
+    description: 'Of professionals feel unfulfilled despite career success',
     source: 'Harvard Business Review, 2023',
   },
   {
     percentage: '+40%',
-    description: 'increase in emerging professionals with a clear personal purpose',
+    description: 'Higher job satisfaction among professionals with a clear personal purpose',
     source: 'Gallup, 2023',
   },
 ];
@@ -56,15 +56,15 @@ export default function RealitySection() {
           <h2 className="text-[#0E2043] mb-4 sm:mb-6 text-3xl sm:text-4xl lg:text-5xl px-4">
             The Reality Behind the Résumé
           </h2>
-          <p className="text-[#2C2C2C]/80 max-w-4xl mx-auto leading-relaxed text-sm sm:text-base lg:text-lg px-4">
-            Ambitious professionals are burning out, drifting off course, and questioning the meaning of success.{' '}
-            <span className="font-semibold text-[#0E2043]">Rebel Coaching</span> exists to meet the quiet crisis with clarity, authenticity, and personal growth.{' '}
-            <span className="italic">These stats paint a sobering but essential picture and show exactly why coaching built on purpose—and from radical trust—is needed.</span>
+          <p className="text-[#2C2C2C]/80 mx-auto leading-relaxed text-base lg:text-lg" style={{ width: '100%', maxWidth: '1200px' }}>
+            Ambitious professionals are burning out, drifting off course, and questioning the meaning of success. <span className="font-semibold text-[#0E2043]">Rebel Coaching</span> exists to meet<br />
+            this quiet crisis with clarity, authenticity, and personal power. These stats paint a sobering but essential picture and show exactly why<br />
+            coaching built on purpose and truth matters more than ever.
           </p>
         </motion.div>
 
         {/* Statistics Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
+        <div className="flex flex-row gap-4 mb-12 sm:mb-16 overflow-x-auto justify-center" style={{ alignItems: 'stretch', paddingLeft: '80px', paddingRight: '80px' }}>
           {statistics.map((stat, index) => (
             <motion.div
               key={index}
@@ -72,30 +72,39 @@ export default function RealitySection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.3 } }}
-              className="group relative"
+              className="group relative flex-shrink-0"
+              style={{ width: '220px', height: '220px' }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#FF6A00]/0 to-[#99A9C9]/0 group-hover:from-[#FF6A00]/5 group-hover:to-[#99A9C9]/10 rounded-2xl transition-all duration-500 blur-xl" />
               
-              <div className="relative bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-sm group-hover:shadow-xl transition-all duration-300 border border-[#99A9C9]/10 h-full flex flex-col">
+              <div className="relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm group-hover:shadow-xl transition-all duration-300 border border-[#99A9C9]/10 flex flex-col w-full h-full" style={{ width: '220px', height: '220px' }}>
                 {/* Percentage */}
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.2, type: 'spring' }}
-                  className="mb-4"
+                  className="mb-3"
                 >
-                  <span className="text-4xl sm:text-5xl lg:text-6xl text-[#FF6A00]">
+                  <span 
+                    className="text-3xl sm:text-4xl lg:text-5xl font-bold"
+                    style={{
+                      background: 'linear-gradient(to right, #3B82F6, #FF6A00)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text'
+                    }}
+                  >
                     {stat.percentage}
                   </span>
                 </motion.div>
 
                 {/* Description */}
-                <p className="text-[#2C2C2C]/80 mb-4 flex-grow leading-relaxed text-sm sm:text-base">
+                <p className="text-[#2C2C2C]/80 mb-2 flex-grow leading-relaxed text-xs sm:text-sm" style={{ minHeight: 0 }}>
                   {stat.description}
                 </p>
 
                 {/* Source */}
-                <p className="text-[#99A9C9] text-xs sm:text-sm pt-4 border-t border-[#99A9C9]/10">
+                <p className="text-[#99A9C9] text-xs pt-2 border-t border-[#99A9C9]/10 break-words flex-shrink-0" style={{ wordBreak: 'break-word', overflowWrap: 'break-word', fontSize: '11px', lineHeight: '1.4' }}>
                   {stat.source}
                 </p>
               </div>

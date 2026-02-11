@@ -30,8 +30,28 @@ export default function ServicePathSection() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section ref={ref} className="py-16 sm:py-20 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      ref={ref} 
+      className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
+      style={{
+        minHeight: '600px',
+        backgroundColor: 'transparent',
+      }}
+    >
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url('/images/frame-1707482049.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 1,
+          zIndex: 0,
+          pointerEvents: 'none',
+        }}
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" style={{ zIndex: 10, position: 'relative', backgroundColor: 'transparent' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

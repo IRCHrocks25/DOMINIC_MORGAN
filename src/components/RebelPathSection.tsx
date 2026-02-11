@@ -345,13 +345,13 @@ export default function RebelPathSection() {
                             ))}
                           </div>
 
-                          {/* Single Session */}
+                          {/* Single Session - No Container */}
                           {service.singleSession && (
                             <motion.div
                               initial={{ opacity: 0, y: 20 }}
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ duration: 0.4, delay: 0.3 }}
-                              className="bg-[#0E2043] border border-[#99A9C9]/40 rounded-xl sm:rounded-2xl p-5 sm:p-6"
+                              className="mt-6 sm:mt-8"
                             >
                               <h4 className="text-white text-lg sm:text-xl mb-2 sm:mb-3">
                                 {service.singleSession.title}
@@ -362,12 +362,9 @@ export default function RebelPathSection() {
                               <p className="text-white/90 text-sm sm:text-base mb-4 leading-relaxed">
                                 {service.singleSession.details}
                               </p>
-                              <div className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#FF6A00]" />
-                                <p className="text-white text-base sm:text-lg font-semibold">
-                                  {service.singleSession.price}
-                                </p>
-                              </div>
+                              <p className="text-white text-base sm:text-lg font-semibold">
+                                {service.singleSession.price}
+                              </p>
                             </motion.div>
                           )}
                         </>

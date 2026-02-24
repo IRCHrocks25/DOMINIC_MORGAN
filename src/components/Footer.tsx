@@ -17,14 +17,14 @@ export default function Footer() {
         <div className="flex flex-row items-start justify-between mb-8">
           
           {/* LEFT SECTION - Passive Block (Slightly Inset from Left) */}
-          <div className="flex flex-col items-start pl-8">
+          <div className="flex flex-col items-center justify-center pl-8">
             <img 
-              src="/images/image16%201.png"
+              src="/images/morgan_logo.png"
               alt="Rebel Coaching Logo"
               className="mb-4"
-              style={{ maxHeight: '140px', objectFit: 'contain' }}
+              style={{ maxHeight: '250px', objectFit: 'contain' }}
             />
-            <p className="text-[#333] text-left text-xl font-medium">
+            <p className="text-[#333] text-center text-xl font-medium">
               Live Your Truth. Lead From Within.
             </p>
           </div>

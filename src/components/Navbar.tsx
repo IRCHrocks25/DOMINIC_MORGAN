@@ -53,16 +53,14 @@ export default function Navbar() {
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-2"
+              className="flex items-center"
             >
               <img 
-                src="/images/image16%202.png"
-                alt="Rebel Coaching"
-                className="h-8 w-8 sm:h-10 sm:w-10"
+                src="/images/morgan_logo.png"
+                alt="Dominic Morgan"
+                className="h-10 w-auto sm:h-12"
                 style={{ objectFit: 'contain' }}
               />
-              <span className="text-[#2C2C2C] text-xl sm:text-2xl" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>Rebel</span>
-              <span className="text-[#2C2C2C]/40 text-xs tracking-wider hidden sm:inline">COACHING</span>
             </motion.div>
 
             {/* Desktop Navigation */}

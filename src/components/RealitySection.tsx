@@ -123,8 +123,8 @@ export default function RealitySection() {
             These numbers aren't just statistics. They are the hidden stories behind quiet frustration, sleepless ambition, and the silent question:{' '}
             <span className="italic">"Is there more to life than checking boxes?"</span>
           </p>
-          <p className="text-[#0E2043] text-lg sm:text-xl lg:text-2xl px-4">
-            Let the data speak. Then choose to rebel.
+          <p className="text-[#0E2043] mb-3 sm:mb-4 leading-relaxed text-base sm:text-lg lg:text-xl px-4">
+            Let data speak. Then choose to rebel.
           </p>
         </motion.div>
 

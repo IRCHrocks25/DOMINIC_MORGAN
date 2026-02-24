@@ -5,32 +5,32 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const valueCards = [
   {
-    image: "https://images.unsplash.com/photo-1758518730384-be3d205838e8?w=800&q=80",
+    image: "/images/use-storytelling-to-make-a-greater-impact-768x512.webp.png",
     title: "Authenticity at Eye Level",
     description: "I don't speak from pedestals. I live what I teach. This work is real, grounded, and born fromulus.happened.",
     span: "col-span-1"
   },
   {
-    image: "https://images.unsplash.com/photo-1707301280380-56f7e7a00aef?w=800&q=80",
+    image: "/images/use-storytelling-to-make-a-greater-impact-768x512.webp (1).png",
     title: "Depth & Substance Over Hype",
     description: "No generic positivity or cookie-cutter formulas. We unlock what truly drives you — your values, your needs, your awareness — so real change sticks.",
     span: "col-span-1"
   },
   {
-    image: "https://images.unsplash.com/photo-1739298061740-5ed03045b280?w=800&q=80",
+    image: "/images/use-storytelling-to-make-a-greater-impact-768x512.webp (2).png",
     title: "Your Personal Rebel Spirit",
     description: "This isn't some \"life-by-the-manual\" approach. I meet you in your messiest moments, ask the hard questions, and guide you to your own truth, not someone else's roadmap.",
     subtext: "This rebel spirit is about thinking differently for a better life, allowing you to use all it to emerge beyond societal guidelines.",
     span: "col-span-1"
   },
   {
-    image: "https://images.unsplash.com/photo-1745478433640-62d7a2fe9b96?w=800&q=80",
+    image: "/images/use-storytelling-to-make-a-greater-impact-768x512.webp (3).png",
     title: "Clarity, Structure & Support That Stick",
     description: "You'll get clear, actionable steps, and I stay by your side between the \"aha!\" moments. With Mindshop or small support, creating guardrails that's ultra-human, and real I soundly challenge and reinforce you every step of the way.",
     span: "col-span-1"
   },
   {
-    image: "https://images.unsplash.com/photo-1761933799610-c9a75f115794?w=800&q=80",
+    image: "/images/use-storytelling-to-make-a-greater-impact-768x512.webp (4).png",
     title: "A Holistic & Human Lens",
     description: "As an Integral Coach and also trained under Tony Robbins, I work with your whole self: body, mind, soul, thoughts, emotions, and the systems around you — from the boardroom to your most personal relationships. With love, truth, and lasting connection.",
     span: "col-span-1"
@@ -60,7 +60,7 @@ export default function WhyWorkWithMeSection() {
           </p>
           
           <h2 className="text-[#0E2043] mb-6 text-3xl sm:text-4xl lg:text-5xl leading-tight max-w-4xl mx-auto">
-            Because Real Change Demands More Than Just Talk
+            Because Real Change Demands<br/>More Than Just Talk
           </h2>
           
           <p className="text-[#2C2C2C]/80 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed">

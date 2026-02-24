@@ -61,7 +61,7 @@ export default function QuoteSection() {
             style={{ position: 'relative' }}
           >
             <p 
-              className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl leading-relaxed tracking-tight italic"
+              className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl leading-relaxed tracking-tight"
               style={{ color: 'inherit' }}
             >
               <span style={{ color: '#C3C3C3' }}>"Autopilot is the enemy of authenticity.<br /></span>

@@ -36,10 +36,10 @@ export default function RebelMovementSection() {
           <div className="space-y-6 lg:pr-8">
             <div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#0E2043]">
-                The <span className="italic">Rebel Movement</span>
+                The <span className="font-bold">Rebel Movement</span>
               </h2>
               {/* Orange accent line swish */}
-              <div className="w-24 h-0.5 bg-[#FF6A00] mt-4" />
+              <div className="w-60 h-0.5 bg-[#FF6A00] mt-4" />
             </div>
             
             <div className="space-y-4 text-[#2C2C2C]/80 text-lg leading-relaxed">
@@ -75,7 +75,7 @@ export default function RebelMovementSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1551731409-43eb3e517a1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGNvYWNoaW5nJTIweY9uclMwMjBlbXBvd2VybWVudHxlbnwxfHx8fDE3NjM1ODgzMzF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/images/Rectangle 8.png"
                 alt="Empowering coaching session"
                 className="w-full h-full object-cover"
               />
@@ -103,7 +103,7 @@ export default function RebelMovementSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1758519290801-c07424a5142a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25maWRlbnQlMjBidXNpbmVzcyUyMGNvYWNoJTIwY2VsZWJyYXRpbmclMjBzdWNjZXNzfGVufDF8fHx8MTc2MzU4ODMzMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/images/Rectangle 9.png"
                 alt="Confident business professional celebrating transformation"
                 className="w-full h-full object-cover"
               />
@@ -116,10 +116,10 @@ export default function RebelMovementSection() {
           <div className="space-y-6 lg:pl-8 order-1 lg:order-2">
             <div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#0E2043]">
-                Your <span className="italic">Inevitable</span> Transformation
+                Your <span className="font-bold">Inevitable Transformation</span>
               </h2>
               {/* Orange accent line swish */}
-              <div className="w-24 h-0.5 bg-[#FF6A00] mt-4" />
+              <div className="w-60 h-0.5 bg-[#FF6A00] mt-4" />
             </div>
             
             <div className="space-y-4 text-[#2C2C2C]/80 text-lg leading-relaxed">

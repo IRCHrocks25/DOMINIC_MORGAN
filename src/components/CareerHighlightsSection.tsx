@@ -21,29 +21,16 @@ export default function CareerHighlightsSection() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative lg:max-w-sm"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1762505465530-0584b9771329?w=800&q=80"
+                src="/images/image_transformation.png"
                 alt="Dominic - Executive Coach"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover"
               />
               {/* Orange gradient overlay at bottom */}
               <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#FF6A00]/30 to-transparent" />
-            </div>
-            
-            {/* Decorative logo overlay - top left */}
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-[#FF6A00]/20 to-[#FEDCC4]/30 rounded-2xl backdrop-blur-sm flex items-center justify-center">
-              <svg viewBox="0 0 100 100" className="w-16 h-16">
-                <path
-                  d="M30 70 L50 30 L70 70 M35 60 L65 60"
-                  stroke="#FF6A00"
-                  strokeWidth="4"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </svg>
             </div>
           </motion.div>
 
@@ -58,9 +45,9 @@ export default function CareerHighlightsSection() {
               CAREER HIGHLIGHTS
             </p>
             
-            <h2 className="text-[#0E2043] mb-6 text-3xl sm:text-4xl lg:text-5xl leading-tight">
-              From Boardrooms to Burnouts to Breakthroughs: A Career Rooted in Real-Life Transformation
-            </h2>
+            <h3 className="text-[#0E2043] mb-6 text-2xl sm:text-3xl lg:text-4xl leading-tight">
+              From Boardrooms to Burnouts to Breakthroughs: <span className="text-[#0E2043]">A Career Rooted in Real-Life Transformation</span>
+            </h3>
             
             <div className="space-y-4 mb-8 text-[#2C2C2C]/80 leading-relaxed">
               <p className="text-sm sm:text-base lg:text-lg">

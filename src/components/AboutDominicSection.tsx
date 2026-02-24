@@ -18,9 +18,9 @@ export default function AboutDominicSection() {
           <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 bg-[#FF6A00] z-10" />
           
           {/* Image Container */}
-          <div className="relative h-[400px] sm:h-[500px] lg:h-full lg:min-h-[700px]">
+          <div className="relative h-[150px] sm:h-[180px] lg:h-[200px]">
             <ImageWithFallback
-              src="https://images.unsplash.com/flagged/photo-1567347611511-a8db7dce144f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25maWRlbnQlMjBleGVjdXRpdmUlMjBjb2FjaCUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2Mzk4OTA2NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src="/images/dominic 1.png"
               alt="Dominic - Rebel Coach"
               className="w-full h-full object-cover"
             />
@@ -43,13 +43,13 @@ export default function AboutDominicSection() {
             </p>
 
             {/* Title with Orange Accent Line */}
-            <div className="mb-6 sm:mb-8">
+            <div className="mb-6 sm:mb-8 text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#0E2043] mb-3 sm:mb-4 leading-tight">
                 From Burnout to Breakthrough:<br />
-                <span className="italic">My Journey, Your Inspiration</span>
+                <span className="font-bold">My Journey, Your Inspiration</span>
               </h2>
               {/* Orange accent line swish */}
-              <div className="w-20 sm:w-24 h-0.5 bg-[#FF6A00]" />
+              <div className="w-20 sm:w-24 h-0.5 bg-[#FF6A00] mx-auto" />
             </div>
 
             {/* Body Content */}

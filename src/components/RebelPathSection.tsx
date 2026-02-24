@@ -82,6 +82,16 @@ export default function RebelPathSection() {
 
   return (
     <section ref={ref} className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#FEDCC4]/30 via-[#F6F7F9] to-white relative overflow-hidden">
+      {/* Background Frame Image */}
+      <div 
+        className="absolute inset-0 opacity-80 z-0"
+        style={{
+          backgroundImage: 'url(/images/frame-1707482049.png)',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        }}
+      />
       {/* Decorative Elements */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#FF6A00]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-[#99A9C9]/10 rounded-full blur-3xl" />
@@ -228,11 +238,11 @@ export default function RebelPathSection() {
           
           <h2 className="text-[#0E2043] mb-4 sm:mb-6 text-3xl sm:text-4xl lg:text-5xl px-4">
             Your Journey to Authentic Power Starts Here:<br className="hidden sm:block" />
-            <span className="block mt-2">Choose Your Rebel Path</span>
+            <span className="block mt-2 font-bold">Choose Your Rebel Path</span>
           </h2>
           
           <p className="text-[#2C2C2C]/80 max-w-3xl mx-auto leading-relaxed text-sm sm:text-base lg:text-lg px-4">
-            All programs are built on the signature <span className="font-semibold text-[#0E2043]">Rebel Momentum Method</span>, an integrative framework that aligns your life with your values, identity, and true purpose.
+            All programs are built on signature Rebel Momentum Method, an integrative framework that aligns your life with your values, identity, and true purpose.
           </p>
         </motion.div>
 
@@ -247,11 +257,8 @@ export default function RebelPathSection() {
               className="group"
             >
               <div
-                className={`rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg transition-all duration-500 ${
-                  expandedIndex.includes(index)
-                    ? 'bg-gradient-to-br from-[#2C2C2C] to-[#2C2C2C]/95'
-                    : 'bg-gradient-to-br from-[#E8EAF0] to-[#D8DCE8] hover:shadow-xl'
-                }`}
+                className={`rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg transition-all duration-500 bg-[#272727] hover:shadow-xl`}
+                style={{ backgroundColor: '#272727' }}
               >
                 {/* Header */}
                 <button
@@ -260,25 +267,28 @@ export default function RebelPathSection() {
                 >
                   <div className="flex items-start gap-4 sm:gap-6 flex-1">
                     <span
-                      className={`text-3xl sm:text-4xl transition-all duration-300 bg-clip-text ${
-                        expandedIndex.includes(index) 
-                          ? 'text-transparent bg-gradient-to-br from-[#FF6A00] via-[#FF6A00] to-[#FEDCC4]' 
-                          : 'text-transparent bg-gradient-to-br from-[#FF6A00] via-[#FF6A00]/90 to-[#0E2043]'
-                      }`}
+                      className="text-3xl sm:text-4xl transition-all duration-300"
+                      style={{
+                        background: 'linear-gradient(to right, #3B82F6, #F97316)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        color: 'transparent'
+                      }}
                     >
                       {service.number}
                     </span>
                     <div className="flex-1">
                       <h3
                         className={`text-xl sm:text-2xl lg:text-3xl mb-2 transition-colors duration-300 ${
-                          expandedIndex.includes(index) ? 'text-white' : 'text-[#0E2043]'
+                          expandedIndex.includes(index) ? 'text-white' : 'text-white'
                         }`}
                       >
                         {service.title}
                       </h3>
                       <p
                         className={`text-sm sm:text-base transition-colors duration-300 ${
-                          expandedIndex.includes(index) ? 'text-white/80' : 'text-[#2C2C2C]/90'
+                          expandedIndex.includes(index) ? 'text-white/80' : 'text-white/90'
                         }`}
                       >
                         {service.subtitle}
@@ -309,7 +319,7 @@ export default function RebelPathSection() {
                     className="px-6 sm:px-8 pb-6 sm:pb-8"
                   >
                     <div className="pl-0 sm:pl-16">
-                      <p className="text-white/95 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
+                      <p className="leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base text-white" style={{ color: '#ffffff !important' }}>
                         {service.description}
                       </p>
 
@@ -323,22 +333,22 @@ export default function RebelPathSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.4, delay: pkgIndex * 0.1 }}
-                                className="bg-[#FF6A00] rounded-xl sm:rounded-2xl p-5 sm:p-6 text-white"
+                                className="bg-[#FF6A00] rounded-xl sm:rounded-2xl p-6 sm:p-8 text-white"
                               >
-                                <h4 className="text-lg sm:text-xl mb-2 sm:mb-3">
+                                <h4 className="text-xl sm:text-2xl mb-3 sm:mb-4 font-bold">
                                   {pkg.name}
                                 </h4>
-                                <p className="text-white/95 text-xs sm:text-sm mb-4">
+                                <p className="text-white/95 text-sm sm:text-base mb-4">
                                   {pkg.frequency}
                                 </p>
-                                <div className="space-y-2 text-sm sm:text-base">
-                                  <p className="flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                                    {pkg.priceMonthly} <span className="text-white/80">({pkg.pricePerSession})</span>
+                                <div className="space-y-3 text-base sm:text-lg">
+                                  <p className="flex items-center gap-2 font-semibold">
+                                    <span className="w-2 h-2 rounded-full bg-white" />
+                                    <span className="font-bold">{pkg.priceMonthly}</span> <span className="text-white/80">({pkg.pricePerSession})</span>
                                   </p>
-                                  <p className="flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                                    {pkg.priceFull}
+                                  <p className="flex items-center gap-2 font-semibold">
+                                    <span className="w-2 h-2 rounded-full bg-white" />
+                                    <span className="font-bold">{pkg.priceFull}</span>
                                   </p>
                                 </div>
                               </motion.div>
@@ -353,16 +363,16 @@ export default function RebelPathSection() {
                               transition={{ duration: 0.4, delay: 0.3 }}
                               className="mt-6 sm:mt-8"
                             >
-                              <h4 className="text-white text-lg sm:text-xl mb-2 sm:mb-3">
+                              <h4 className="text-lg sm:text-xl mb-2 sm:mb-3" style={{ color: '#ddc4ad' }}>
                                 {service.singleSession.title}
                               </h4>
-                              <p className="text-white/95 text-sm sm:text-base mb-3 sm:mb-4">
+                              <p className="text-sm sm:text-base mb-3 sm:mb-4 text-white" style={{ color: '#ffffff !important' }}>
                                 {service.singleSession.description}
                               </p>
-                              <p className="text-white/90 text-sm sm:text-base mb-4 leading-relaxed">
+                              <p className="text-sm sm:text-base mb-4 leading-relaxed text-white" style={{ color: '#ffffff !important' }}>
                                 {service.singleSession.details}
                               </p>
-                              <p className="text-white text-base sm:text-lg font-semibold">
+                              <p className="text-base sm:text-lg font-semibold" style={{ color: '#ddc4ad' }}>
                                 {service.singleSession.price}
                               </p>
                             </motion.div>
@@ -403,7 +413,7 @@ export default function RebelPathSection() {
                             transition={{ duration: 0.4, delay: 0.5 }}
                             className="bg-[#FF6A00] rounded-xl sm:rounded-2xl p-5 sm:p-6 text-white"
                           >
-                            <h4 className="text-lg sm:text-xl mb-4">
+                            <h4 className="text-white text-lg sm:text-xl mb-4 font-bold">
                               Investment
                             </h4>
                             <div className="space-y-2">
@@ -448,15 +458,14 @@ export default function RebelPathSection() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center"
         >
-          <p className="text-[#2C2C2C]/80 mb-2 text-sm sm:text-base">
-            Stay tuned — <span className="font-semibold text-[#0E2043]">next-level offerings</span> are on their way.
+          <p className="text-[#0E2043] mb-2 text-base sm:text-lg lg:text-xl">
+            Stay tuned — <span className="font-semibold">next-level offerings</span> are on their way.
           </p>
-          <p className="text-[#2C2C2C]/70 mb-6 sm:mb-8 text-sm sm:text-base">
-            Want to be the first to know when <span className="font-semibold text-[#0E2043]">Rebel Masterclasses</span> launch?
+          <p className="text-[#0E2043] mb-6 sm:mb-8 text-base sm:text-lg lg:text-xl">
+            Want to be the first to know when <span className="font-semibold">Rebel Masterclasses</span> launch?
           </p>
-          <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-6 sm:px-10 py-5 sm:py-7 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full sm:w-auto group">
+          <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-6 sm:px-10 py-5 sm:py-7 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full sm:w-auto">
             Join the waitlist
-            <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
         </motion.div>
       </div>

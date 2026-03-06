@@ -73,11 +73,11 @@ export default function RealitySection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.3 } }}
               className="group relative flex-shrink-0"
-              style={{ width: '220px', height: '220px' }}
+              style={{ width: '280px', height: '280px' }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#FF6A00]/0 to-[#99A9C9]/0 group-hover:from-[#FF6A00]/5 group-hover:to-[#99A9C9]/10 rounded-2xl transition-all duration-500 blur-xl" />
               
-              <div className="relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm group-hover:shadow-xl transition-all duration-300 border border-[#99A9C9]/10 flex flex-col w-full h-full" style={{ width: '220px', height: '220px' }}>
+              <div className="relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm group-hover:shadow-xl transition-all duration-300 border border-[#99A9C9]/10 flex flex-col w-full h-full" style={{ width: '280px', height: '280px' }}>
                 {/* Percentage */}
                 <motion.div
                   initial={{ scale: 0 }}
@@ -86,8 +86,9 @@ export default function RealitySection() {
                   className="mb-3"
                 >
                   <span 
-                    className="text-3xl sm:text-4xl lg:text-5xl font-bold"
+                    className="text-3xl sm:text-4xl lg:text-5xl font-extralight"
                     style={{
+                      fontFamily: "'Plus Jakarta Sans', sans-serif",
                       background: 'linear-gradient(to right, #3B82F6, #FF6A00)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
@@ -99,7 +100,7 @@ export default function RealitySection() {
                 </motion.div>
 
                 {/* Description */}
-                <p className="text-[#2C2C2C]/80 mb-2 flex-grow leading-relaxed text-xs sm:text-sm" style={{ minHeight: 0 }}>
+                <p className="text-[#2C2C2C]/80 mb-2 flex-grow leading-relaxed text-xs sm:text-sm font-bold" style={{ minHeight: 0, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                   {stat.description}
                 </p>
 
@@ -119,11 +120,11 @@ export default function RealitySection() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center max-w-4xl mx-auto mb-8 sm:mb-12"
         >
-          <p className="text-[#2C2C2C]/90 mb-3 sm:mb-4 leading-relaxed text-base sm:text-lg lg:text-xl px-4">
+          <p className="text-[#2C2C2C]/90 mb-3 sm:mb-4 leading-relaxed text-base sm:text-lg lg:text-xl px-4 font-semibold" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
             These numbers aren't just statistics. They are the hidden stories behind quiet frustration, sleepless ambition, and the silent question:{' '}
             <span className="italic">"Is there more to life than checking boxes?"</span>
           </p>
-          <p className="text-[#0E2043] mb-3 sm:mb-4 leading-relaxed text-base sm:text-lg lg:text-xl px-4">
+          <p className="text-[#0E2043] mb-3 sm:mb-4 leading-relaxed text-base sm:text-lg lg:text-xl px-4 font-semibold" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
             Let data speak. Then choose to rebel.
           </p>
         </motion.div>

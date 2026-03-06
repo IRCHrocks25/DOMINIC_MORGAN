@@ -22,47 +22,48 @@ export default function LogosSection() {
             OUR CLIENT
           </p>
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative"
-        >
-          {/* Gradient Overlays for fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-
-          {/* Marquee Container */}
-          <div className="flex overflow-hidden">
-            {/* First set of logos */}
-            <motion.div
-              animate={{ x: ['0%', '-100%'] }}
-              transition={{
-                duration: 40,
-                repeat: Infinity,
-                ease: 'linear',
-              }}
-              className="flex items-center shrink-0"
-            >
-              <Cred2 />
-            </motion.div>
-
-            {/* Duplicate set for seamless loop */}
-            <motion.div
-              animate={{ x: ['0%', '-100%'] }}
-              transition={{
-                duration: 40,
-                repeat: Infinity,
-                ease: 'linear',
-              }}
-              className="flex items-center shrink-0"
-            >
-              <Cred2 />
-            </motion.div>
-          </div>
-        </motion.div>
       </div>
+
+      {/* Full-width logos - stretches edge to edge */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="relative w-screen left-1/2 -translate-x-1/2"
+      >
+        {/* Gradient Overlays for fade effect */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
+        {/* Marquee Container */}
+        <div className="flex overflow-hidden">
+          {/* First set of logos */}
+          <motion.div
+            animate={{ x: ['0%', '-100%'] }}
+            transition={{
+              duration: 40,
+              repeat: Infinity,
+              ease: 'linear',
+            }}
+            className="flex items-center shrink-0"
+          >
+            <Cred2 />
+          </motion.div>
+
+          {/* Duplicate set for seamless loop */}
+          <motion.div
+            animate={{ x: ['0%', '-100%'] }}
+            transition={{
+              duration: 40,
+              repeat: Infinity,
+              ease: 'linear',
+            }}
+            className="flex items-center shrink-0"
+          >
+            <Cred2 />
+          </motion.div>
+        </div>
+      </motion.div>
     </section>
   );
 }

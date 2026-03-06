@@ -113,7 +113,7 @@ function Container9() {
 
 export default function Cred() {
   return (
-    <div className="content-stretch flex gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-center relative size-full px-4 sm:px-8" data-name="cred2">
+    <div className="content-stretch flex justify-between items-center relative w-full min-w-[100vw]" data-name="cred2">
       <Container />
       <Container1 />
       <Container2 />

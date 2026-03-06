@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import circlesPattern from '../assets/asian-white-seamless-circles-pattern 1.png';
 
 const valueCards = [
   {
@@ -42,7 +43,16 @@ export default function WhyWorkWithMeSection() {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section ref={ref} className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#F6F7F9] via-white to-[#F6F7F9] relative overflow-hidden">
+    <section 
+      ref={ref} 
+      className="py-16 sm:py-20 lg:py-24 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${circlesPattern})`,
+        backgroundRepeat: 'repeat',
+        backgroundPosition: 'center',
+        backgroundColor: '#F6F7F9',
+      }}
+    >
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FEDCC4]/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#99A9C9]/10 rounded-full blur-3xl" />
@@ -55,7 +65,7 @@ export default function WhyWorkWithMeSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <p className="text-[#FF6A00] uppercase tracking-wider text-xs sm:text-sm mb-4">
+          <p className="text-[#FF6A00] uppercase tracking-wider text-xs sm:text-sm mb-4 font-semibold">
             WHY WORK WITH ME
           </p>
           

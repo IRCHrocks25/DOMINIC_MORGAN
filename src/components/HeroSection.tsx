@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
+import heroImage from '../assets/Group 1.png';
 
 export default function HeroSection() {
   return (
@@ -27,7 +28,7 @@ export default function HeroSection() {
         }}
       >
         <img 
-          src="/images/Group%201.png"
+          src={heroImage}
           alt="Professional Executive Coach"
           className="w-full h-full"
           style={{ 

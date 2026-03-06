@@ -70,7 +70,7 @@ const services = [
 export default function RebelPathSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
-  const [expandedIndex, setExpandedIndex] = useState<number[]>([0, 1, 2]); // All expanded by default
+  const [expandedIndex, setExpandedIndex] = useState<number[]>([]); // Start collapsed (white)
 
   const toggleExpanded = (index: number) => {
     if (expandedIndex.includes(index)) {
@@ -257,8 +257,10 @@ export default function RebelPathSection() {
               className="group"
             >
               <div
-                className={`rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg transition-all duration-500 bg-[#272727] hover:shadow-xl`}
-                style={{ backgroundColor: '#272727' }}
+                className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl"
+                style={{
+                  backgroundColor: expandedIndex.includes(index) ? '#0d0d0d' : '#ffffff',
+                }}
               >
                 {/* Header */}
                 <button
@@ -281,14 +283,14 @@ export default function RebelPathSection() {
                     <div className="flex-1">
                       <h3
                         className={`text-xl sm:text-2xl lg:text-3xl mb-2 transition-colors duration-300 ${
-                          expandedIndex.includes(index) ? 'text-white' : 'text-white'
+                          expandedIndex.includes(index) ? 'text-white' : 'text-[#0E2043]'
                         }`}
                       >
                         {service.title}
                       </h3>
                       <p
                         className={`text-sm sm:text-base transition-colors duration-300 ${
-                          expandedIndex.includes(index) ? 'text-white/80' : 'text-white/90'
+                          expandedIndex.includes(index) ? 'text-white/80' : 'text-[#2C2C2C]/80'
                         }`}
                       >
                         {service.subtitle}
@@ -458,10 +460,10 @@ export default function RebelPathSection() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center"
         >
-          <p className="text-[#0E2043] mb-2 text-base sm:text-lg lg:text-xl">
+          <p className="text-[#0E2043] mb-2 text-base sm:text-lg lg:text-xl font-bold" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
             Stay tuned — <span className="font-semibold">next-level offerings</span> are on their way.
           </p>
-          <p className="text-[#0E2043] mb-6 sm:mb-8 text-base sm:text-lg lg:text-xl">
+          <p className="text-[#0E2043] mb-6 sm:mb-8 text-base sm:text-lg lg:text-xl" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
             Want to be the first to know when <span className="font-semibold">Rebel Masterclasses</span> launch?
           </p>
           <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-6 sm:px-10 py-5 sm:py-7 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full sm:w-auto">

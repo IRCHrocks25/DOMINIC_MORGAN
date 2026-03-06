@@ -9,13 +9,8 @@ export default function FinalCTASection() {
     <section 
       ref={ref} 
       id="contact" 
-      className="relative w-full flex items-center justify-center text-center"
-      style={{
-        minHeight: '580px',
-        paddingTop: '90px',
-        paddingBottom: '90px',
-        backgroundColor: '#0A1A35',
-      }}
+      className="relative w-full flex items-center justify-center text-center min-h-[400px] sm:min-h-[520px] lg:min-h-[580px] py-12 sm:py-16 lg:py-[90px] overflow-x-hidden"
+      style={{ backgroundColor: '#0A1A35' }}
     >
       {/* Dark Navy Base with Subtle Bright Blue Glow at Bottom Center (behind buttons) */}
       <div 
@@ -25,7 +20,7 @@ export default function FinalCTASection() {
         }}
       />
 
-      <div className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[900px] mx-auto px-5 sm:px-6 lg:px-8 relative z-10 w-full min-w-0">
         {/* Main Headline */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,15 +43,14 @@ export default function FinalCTASection() {
             }}
           />
           <h2
-            className="text-[#F6F7F9] text-center relative"
+            className="text-[#F6F7F9] text-center relative max-w-full break-words"
             style={{
-              fontSize: 'clamp(48px, 4vw, 60px)',
+              fontSize: 'clamp(26px, 7vw, 60px)',
               fontWeight: 400,
-              lineHeight: 1.12,
+              lineHeight: 1.15,
               letterSpacing: '-0.5px',
               marginLeft: 'auto',
               marginRight: 'auto',
-              whiteSpace: 'nowrap',
               zIndex: 1,
             }}
           >
@@ -69,45 +63,33 @@ export default function FinalCTASection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mb-8"
-          style={{
-            maxWidth: '620px',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-          }}
+          className="mb-8 max-w-[620px] mx-auto min-w-0"
         >
           <p
-            className="text-white"
-            style={{
-              fontSize: '18px',
-              lineHeight: 1.7,
-              opacity: 0.92,
-            }}
+            className="text-white text-sm sm:text-base lg:text-lg leading-relaxed break-words"
+            style={{ opacity: 0.92 }}
           >
-            No more drifting. No more delay.<br />
-            Whether you're stuck, seeking clarity, or ready to evolve –<br />
-            this is your moment. Rebel Coaching offers multiple ways to begin,<br />
+            No more drifting. No more delay.<br className="hidden sm:inline" />
+            Whether you're stuck, seeking clarity, or ready to evolve –<br className="hidden sm:inline" />
+            this is your moment. Rebel Coaching offers multiple ways to begin,<br className="hidden sm:inline" />
             each one designed to meet you where you are and move you forward with purpose.
           </p>
         </motion.div>
 
-        {/* Button Row */}
+        {/* Button Row - Stack on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex items-center justify-center gap-6 sm:gap-8 mb-5"
+          className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-8 mb-5 w-full min-w-0"
         >
           {/* Primary Button - Orange */}
           <motion.button
             whileHover={{ backgroundColor: '#FF7A1A' }}
-            className="text-white rounded-full font-medium transition-all duration-300"
+            whileTap={{ scale: 0.98 }}
+            className="w-full sm:w-auto min-h-[48px] sm:min-h-[56px] text-white rounded-full font-medium transition-all duration-300 px-5 sm:px-9 py-3.5 text-xs sm:text-sm md:text-base touch-manipulation whitespace-normal sm:whitespace-nowrap text-center"
             style={{
-              height: '56px',
-              paddingLeft: '36px',
-              paddingRight: '36px',
               backgroundColor: '#FF6A00',
-              fontSize: '16px',
               boxShadow: '0 4px 12px rgba(255, 106, 0, 0.3)',
             }}
           >
@@ -117,14 +99,11 @@ export default function FinalCTASection() {
           {/* Secondary Button - Outline */}
           <motion.button
             whileHover={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-            className="text-white rounded-full font-medium transition-all duration-300"
+            whileTap={{ scale: 0.98 }}
+            className="w-full sm:w-auto min-h-[48px] sm:min-h-[56px] text-white rounded-full font-medium transition-all duration-300 px-5 sm:px-9 py-3.5 text-xs sm:text-sm md:text-base touch-manipulation whitespace-normal sm:whitespace-nowrap text-center"
             style={{
-              height: '56px',
-              paddingLeft: '36px',
-              paddingRight: '36px',
               backgroundColor: 'transparent',
               border: '1.5px solid rgba(255, 255, 255, 0.4)',
-              fontSize: '16px',
             }}
           >
             Download the Rebel Starter Pack
@@ -136,12 +115,8 @@ export default function FinalCTASection() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-white"
-          style={{
-            fontSize: '16px',
-            fontWeight: 400,
-            opacity: 0.7,
-          }}
+          className="text-white text-sm sm:text-base font-normal break-words min-w-0"
+          style={{ opacity: 0.7 }}
         >
           One path. Many entry points. The first step is yours to take.
         </motion.p>

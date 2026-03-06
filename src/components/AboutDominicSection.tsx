@@ -4,6 +4,24 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 export default function AboutDominicSection() {
   return (
     <section className="relative bg-[#F6F7F9] overflow-hidden">
+      {/* Header - Full width at top */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 md:pt-20 pb-6 sm:pb-12"
+      >
+        <p className="text-[#FF6A00] text-xs sm:text-sm tracking-widest uppercase mb-4 sm:mb-6">
+          ABOUT DOMINIC
+        </p>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#0E2043] mb-3 sm:mb-4 leading-tight">
+          From Burnout to Breakthrough:<br />
+          <span className="font-bold">My Journey, Your Inspiration</span>
+        </h2>
+        <div className="w-20 sm:w-24 h-0.5 bg-[#FF6A00] mx-auto" />
+      </motion.div>
+
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
         
         {/* Left Side - Image with Orange Accent */}
@@ -18,7 +36,7 @@ export default function AboutDominicSection() {
           <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 bg-[#FF6A00] z-10" />
           
           {/* Image Container */}
-          <div className="relative h-[150px] sm:h-[180px] lg:h-[200px]">
+          <div className="relative h-[200px] sm:h-[280px] lg:h-[400px]">
             <ImageWithFallback
               src="/images/dominic 1.png"
               alt="Dominic - Rebel Coach"
@@ -33,25 +51,10 @@ export default function AboutDominicSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="lg:col-span-7 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 flex items-center order-2 lg:order-2"
+          className="lg:col-span-7 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 py-6 sm:py-12 md:py-16 lg:py-20 flex items-center order-2 lg:order-2"
         >
           <div className="max-w-2xl w-full">
             
-            {/* Small Label */}
-            <p className="text-[#FF6A00] text-xs sm:text-sm tracking-widest uppercase mb-4 sm:mb-6">
-              ABOUT DOMINIC
-            </p>
-
-            {/* Title with Orange Accent Line */}
-            <div className="mb-6 sm:mb-8 text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#0E2043] mb-3 sm:mb-4 leading-tight">
-                From Burnout to Breakthrough:<br />
-                <span className="font-bold">My Journey, Your Inspiration</span>
-              </h2>
-              {/* Orange accent line swish */}
-              <div className="w-20 sm:w-24 h-0.5 bg-[#FF6A00] mx-auto" />
-            </div>
-
             {/* Body Content */}
             <div className="space-y-3 sm:space-y-4 text-[#2C2C2C]/80 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
               <p className="font-bold">
@@ -69,6 +72,7 @@ export default function AboutDominicSection() {
               <p>
                 Then came 2003. Burnout. Hard.
               </p>
+              <div className="w-full h-px bg-[#FF6A00] my-4 max-w-[200px]" />
               
               <p>
                 It started raw cold. It forced me to face a truth I had lost myself in the process of achieving. That collapse became my wake-up call. It taught me that success without alignment is just another form of self-betrayal.
@@ -91,7 +95,7 @@ export default function AboutDominicSection() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255, 106, 0, 0.3)" }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#FF6A00] text-white rounded-full text-sm sm:text-base md:text-lg hover:bg-[#FF6A00]/90 transition-all duration-300 shadow-lg touch-manipulation"
+              className="w-full sm:w-auto min-h-[48px] px-5 sm:px-8 py-3 sm:py-4 bg-[#FF6A00] text-white rounded-full text-xs sm:text-sm md:text-base lg:text-lg hover:bg-[#FF6A00]/90 transition-all duration-300 shadow-lg touch-manipulation whitespace-normal sm:whitespace-nowrap text-center"
             >
               Ready to write your own story? Let's talk.
             </motion.button>

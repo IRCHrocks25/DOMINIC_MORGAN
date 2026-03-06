@@ -24,7 +24,7 @@ const testimonials = [
 
 export default function TestimonialsMarquee() {
   return (
-    <section className="relative py-20 md:py-32 bg-[#FF6A00] overflow-hidden">
+    <section className="relative py-12 sm:py-16 md:py-24 lg:py-32 bg-[#FF6A00] overflow-hidden">
       {/* Grid Pattern Background */}
       <div className="absolute inset-0">
         {/* Main Grid Pattern */}
@@ -65,12 +65,12 @@ export default function TestimonialsMarquee() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-10 sm:mb-12 md:mb-16 lg:mb-20"
         >
-          <p className="text-white/90 tracking-[0.2em] uppercase text-sm mb-4">
+          <p className="text-white/90 tracking-[0.2em] uppercase text-xs sm:text-sm mb-3 sm:mb-4">
             TESTIMONIALS
           </p>
-          <h2 className="text-white text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl px-2">
             The Results Speak for Themselves
           </h2>
         </motion.div>
@@ -84,10 +84,10 @@ export default function TestimonialsMarquee() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
               {/* Title */}
-              <h3 className="text-[#0E2043] text-xl mb-4">
+              <h3 className="text-[#0E2043] text-lg sm:text-xl mb-3 sm:mb-4">
                 {testimonial.title}
               </h3>
 
@@ -103,7 +103,7 @@ export default function TestimonialsMarquee() {
 
               {/* Testimonial Text */}
               <div className="flex-1 space-y-4">
-                <p className="text-[#2C2C2C]/80 text-base leading-relaxed whitespace-pre-line">
+                <p className="text-[#2C2C2C]/80 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                   {testimonial.text}
                 </p>
 

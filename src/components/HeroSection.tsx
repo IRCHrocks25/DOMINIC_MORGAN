@@ -4,7 +4,7 @@ import heroImage from '../assets/Group 1.png';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F6F7F9]">
+    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden bg-[#F6F7F9]">
       {/* Background Pattern - Left Side */}
       <div 
         className="absolute inset-0 z-0"
@@ -17,9 +17,9 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Group 1 Image - Full Height Right Side */}
+      {/* Group 1 Image - Right side on desktop, reduced on mobile */}
       <div 
-        className="absolute top-0 bottom-0 right-0 z-[2]"
+        className="absolute top-0 bottom-0 right-0 z-[2] opacity-40 sm:opacity-100"
         style={{
           left: '50%',
           width: '50%',
@@ -90,7 +90,7 @@ export default function HeroSection() {
               transition={{ delay: 0.7, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4"
             >
-              <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-6 sm:px-8 lg:px-10 py-5 sm:py-6 lg:py-7 text-base sm:text-lg lg:text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl group w-full sm:w-auto whitespace-nowrap">
+              <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-5 sm:px-8 lg:px-10 py-5 sm:py-6 lg:py-7 min-h-[48px] text-xs sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl group w-full sm:w-auto touch-manipulation whitespace-normal sm:whitespace-nowrap text-center">
                 Book Your Matchmaker Call Today!
                 <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

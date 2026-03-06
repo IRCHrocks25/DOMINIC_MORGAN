@@ -166,7 +166,7 @@ export default function WhyWorkWithMeSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center"
         >
-          <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-10 sm:px-12 py-6 sm:py-7 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <Button className="w-full sm:w-auto min-h-[48px] bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-5 sm:px-12 py-5 sm:py-7 text-xs sm:text-sm md:text-base transition-all duration-300 hover:scale-105 hover:shadow-2xl touch-manipulation whitespace-normal sm:whitespace-nowrap text-center">
             Experience the difference. Let's connect now.
           </Button>
         </motion.div>

@@ -140,7 +140,7 @@ export default function RebelMovementSection() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255, 106, 0, 0.3)" }}
               whileTap={{ scale: 0.98 }}
-              className="mt-8 px-8 py-4 bg-[#FF6A00] text-white rounded-full text-lg hover:bg-[#FF6A00]/90 transition-all duration-300 shadow-lg"
+              className="mt-8 w-full sm:w-auto px-5 sm:px-8 py-4 min-h-[48px] bg-[#FF6A00] text-white rounded-full text-xs sm:text-sm md:text-lg hover:bg-[#FF6A00]/90 transition-all duration-300 shadow-lg touch-manipulation whitespace-normal sm:whitespace-nowrap text-center"
             >
               Book Your Free Matchmaker Call Today!
             </motion.button>

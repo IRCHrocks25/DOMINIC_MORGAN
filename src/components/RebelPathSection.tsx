@@ -81,7 +81,7 @@ export default function RebelPathSection() {
   };
 
   return (
-    <section ref={ref} className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#FEDCC4]/30 via-[#F6F7F9] to-white relative overflow-hidden">
+    <section ref={ref} className="py-12 sm:py-16 lg:py-20 xl:py-24 bg-gradient-to-br from-[#FEDCC4]/30 via-[#F6F7F9] to-white relative overflow-hidden">
       {/* Background Frame Image */}
       <div 
         className="absolute inset-0 opacity-80 z-0"
@@ -466,7 +466,7 @@ export default function RebelPathSection() {
           <p className="text-[#0E2043] mb-6 sm:mb-8 text-base sm:text-lg lg:text-xl" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
             Want to be the first to know when <span className="font-semibold">Rebel Masterclasses</span> launch?
           </p>
-          <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-6 sm:px-10 py-5 sm:py-7 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full sm:w-auto">
+          <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-5 sm:px-10 py-5 sm:py-7 min-h-[48px] text-xs sm:text-sm md:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full sm:w-auto touch-manipulation whitespace-normal sm:whitespace-nowrap text-center">
             Join the waitlist
           </Button>
         </motion.div>

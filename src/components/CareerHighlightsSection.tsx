@@ -8,20 +8,20 @@ export default function CareerHighlightsSection() {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section ref={ref} className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-white via-[#F6F7F9] to-[#FEDCC4]/20 relative overflow-hidden">
+    <section ref={ref} className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-white via-[#F6F7F9] to-[#FEDCC4]/20 relative overflow-x-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#FF6A00]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-[#99A9C9]/10 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 min-w-0 w-full">
         {/* Top Section: Image and Content */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16 sm:mb-20 lg:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16 sm:mb-20 lg:mb-24 min-w-0">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="relative lg:max-w-sm"
+            className="relative lg:max-w-sm min-w-0"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <ImageWithFallback
@@ -39,30 +39,30 @@ export default function CareerHighlightsSection() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-center min-w-0 w-full overflow-visible"
           >
             <p className="text-[#FF6A00] uppercase tracking-wider text-xs sm:text-sm mb-4">
               CAREER HIGHLIGHTS
             </p>
             
-            <h3 className="text-[#0E2043] mb-6 text-2xl sm:text-3xl lg:text-4xl leading-tight">
+            <h3 className="text-[#0E2043] mb-6 text-2xl sm:text-3xl lg:text-4xl leading-tight break-words">
               From Boardrooms to Burnouts to Breakthroughs: <span className="text-[#0E2043]">A Career Rooted in Real-Life Transformation</span>
             </h3>
             
-            <div className="space-y-4 mb-8 text-[#2C2C2C]/80 leading-relaxed">
-              <p className="text-sm sm:text-base lg:text-lg">
+            <div className="space-y-4 mb-8 text-[#2C2C2C]/80 leading-relaxed min-w-0">
+              <p className="text-sm sm:text-base lg:text-lg break-words">
                 Dominic brings a rare combination of executive leadership, entrepreneurial grit, and 
                 personal reinvention. His coaching isn't built on theory; it's earned through decades of 
                 high-stakes experience, global perspective, and world-class certification.
               </p>
               
-              <p className="text-sm sm:text-base lg:text-lg">
+              <p className="text-sm sm:text-base lg:text-lg break-words">
                 He intentionally fuses his diverse professional and life experiences with his multi-faceted 
                 coaching education to offer a truly unique "rebel approach."
               </p>
             </div>
             
-            <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
+            <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-5 sm:px-10 py-5 sm:py-6 min-h-[48px] text-xs sm:text-sm md:text-base transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto max-w-full touch-manipulation whitespace-normal sm:whitespace-nowrap text-center">
               Book Your Free Matchmaker Call Today!
             </Button>
           </motion.div>

@@ -10,27 +10,25 @@ const Pinterest = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white py-16">
+    <footer className="w-full bg-white py-10 sm:py-12 lg:py-16 overflow-x-hidden">
       {/* Single Layout Authority Container */}
-      <div className="max-w-[1200px] mx-auto px-8">
-        {/* Primary Desktop Row - Two Children Only */}
-        <div className="flex flex-row items-start justify-between mb-8">
-          
-          {/* LEFT SECTION - Passive Block (Slightly Inset from Left) */}
-          <div className="flex flex-col items-center justify-center pl-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0">
+        {/* Primary Row - Stack on mobile, side-by-side on desktop */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-0 mb-8 lg:mb-8">
+          {/* LEFT SECTION - Logo (centered on mobile, indented on desktop) */}
+          <div className="flex flex-col items-center lg:items-start min-w-0 w-full lg:w-auto pl-0 lg:pl-[120px]">
             <img 
               src="/images/morgan_logo.png"
               alt="Rebel Coaching Logo"
-              className="mb-4"
-              style={{ maxHeight: '250px', objectFit: 'contain' }}
+              className="mb-4 w-full max-w-[180px] sm:max-w-[200px] lg:max-w-none max-h-[120px] sm:max-h-[160px] lg:max-h-[250px] h-auto object-contain"
             />
-            <p className="text-[#333] text-center text-xl font-medium">
+            <p className="text-[#333] text-center lg:text-left text-base sm:text-lg lg:text-xl font-medium break-words">
               Live Your Truth. Lead From Within.
             </p>
           </div>
 
-          {/* RIGHT SECTION - Active Horizontal Layout System (Evenly Spaced Columns) */}
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '70px' }}>
+          {/* RIGHT SECTION - Navigation, Contact, Social */}
+          <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 lg:gap-16 w-full sm:w-auto items-center sm:items-start text-center sm:text-left pr-0 lg:pr-[112px] min-w-0">
             {/* Navigation */}
             <div>
               <h3 className="text-[#FF6A00] mb-3 font-medium text-base">
@@ -41,7 +39,7 @@ export default function Footer() {
                   <li key={link}>
                     <a
                       href={`#${link.toLowerCase().replace(' ', '-')}`}
-                      className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm"
+                      className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block"
                     >
                       {link}
                     </a>
@@ -59,7 +57,7 @@ export default function Footer() {
                 <li>
                   <a 
                     href="mailto:ignite@rebel-coaching.ch" 
-                    className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm"
+                    className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block break-all"
                   >
                     ignite@rebel-coaching.ch
                   </a>
@@ -67,7 +65,7 @@ export default function Footer() {
                 <li>
                   <a 
                     href="mailto:ignite@rebel-coaching.com" 
-                    className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm"
+                    className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block break-all"
                   >
                     ignite@rebel-coaching.com
                   </a>
@@ -75,7 +73,7 @@ export default function Footer() {
                 <li>
                   <a 
                     href="tel:+41768242608" 
-                    className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm"
+                    className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block"
                   >
                     +41 76 824 26 08
                   </a>
@@ -88,7 +86,7 @@ export default function Footer() {
               <h3 className="text-[#FF6A00] mb-3 font-medium text-base">
                 Connect With Me
               </h3>
-              <div className="flex gap-3 flex-wrap">
+              <div className="grid grid-cols-3 sm:flex sm:flex-wrap gap-3 justify-center sm:justify-start">
                 {[
                   { icon: Facebook, href: '#', bg: '#1877F2', name: 'Facebook' },
                   { icon: Linkedin, href: '#', bg: '#0A66C2', name: 'LinkedIn' },
@@ -104,7 +102,7 @@ export default function Footer() {
                       href={social.href}
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.2 }}
-                      className="rounded-full flex items-center justify-center transition-all duration-300 w-7 h-7"
+                      className="rounded-full flex items-center justify-center transition-all duration-300 w-9 h-9 sm:w-7 sm:h-7 touch-manipulation"
                       style={{ backgroundColor: social.bg }}
                     >
                       <Icon className="w-4 h-4 text-white" />
@@ -116,33 +114,24 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar - Single Horizontal Row */}
+        {/* Bottom Bar - Stack on mobile */}
         <div 
-          className="pt-4"
-          style={{
-            borderTop: '1px solid rgba(0, 0, 0, 0.08)',
-            marginTop: '12px',
-          }}
+          className="pt-4 mt-3"
+          style={{ borderTop: '1px solid rgba(0, 0, 0, 0.08)' }}
         >
-          <div className="flex flex-col md:flex-row justify-between items-center gap-3">
-            <p 
-              className="text-[#666]"
-              style={{ fontSize: '13px' }}
-            >
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-3 text-center md:text-left">
+            <p className="text-[#666] text-xs sm:text-sm order-1">
               © 2025 Dominic Morgenthaler. All rights reserved.
             </p>
-            <div className="flex gap-6" style={{ fontSize: '13px' }}>
-              <a href="#" className="text-[#666] hover:text-[#FF6A00] transition-colors duration-300">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-xs sm:text-sm order-2">
+              <a href="#" className="text-[#666] hover:text-[#FF6A00] transition-colors duration-300 touch-manipulation py-2 sm:py-0">
                 Privacy Policy
               </a>
-              <a href="#" className="text-[#666] hover:text-[#FF6A00] transition-colors duration-300">
+              <a href="#" className="text-[#666] hover:text-[#FF6A00] transition-colors duration-300 touch-manipulation py-2 sm:py-0">
                 Terms of Service
               </a>
             </div>
-            <p 
-              className="text-[#666]"
-              style={{ fontSize: '13px' }}
-            >
+            <p className="text-[#666] text-xs sm:text-sm order-3 break-words">
               Designed & Developed by <span className="text-[#FF6A00]">KATALYST CRM</span>
             </p>
           </div>

@@ -10,7 +10,7 @@ export default function UnleashedQuoteSection() {
   return (
     <section 
       ref={ref}
-      className="relative py-13 sm:py-16 lg:py-20 overflow-hidden"
+      className="relative py-12 sm:py-16 lg:py-20 overflow-hidden"
       style={{
         backgroundImage: `url(${quoteBackground})`,
         backgroundSize: 'cover',
@@ -19,7 +19,7 @@ export default function UnleashedQuoteSection() {
       }}
     >
       {/* Content Container */}
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 relative" style={{ zIndex: 2 }}>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 relative" style={{ zIndex: 2 }}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
@@ -36,7 +36,7 @@ export default function UnleashedQuoteSection() {
             style={{ position: 'relative' }}
           >
             <p 
-              className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl leading-relaxed tracking-tight italic"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-relaxed tracking-tight italic"
               style={{ color: 'inherit' }}
             >
               <span style={{ color: '#F6F7F9' }}>"The best version of you is already within you –<br /></span>

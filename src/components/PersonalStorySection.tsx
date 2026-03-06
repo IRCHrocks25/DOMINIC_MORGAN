@@ -96,7 +96,7 @@ export default function PersonalStorySection() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center"
         >
-          <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
+          <Button className="bg-[#FF6A00] hover:bg-[#FF6A00]/90 text-white rounded-full px-5 sm:px-8 py-5 sm:py-6 min-h-[48px] text-xs sm:text-sm md:text-base transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto touch-manipulation whitespace-normal sm:whitespace-nowrap text-center">
             BEGIN YOUR TRANSFORMATION
           </Button>
         </motion.div>

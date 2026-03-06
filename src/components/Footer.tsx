@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Linkedin, Twitter, Facebook, Instagram, Youtube } from 'lucide-react';
+import footerLogo from '../assets/Frame 1707482096.png';
 
 // Pinterest icon component
 const Pinterest = ({ className }: { className?: string }) => (
@@ -10,54 +11,48 @@ const Pinterest = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white py-10 sm:py-12 lg:py-16 overflow-x-hidden">
-      {/* Single Layout Authority Container */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0">
-        {/* Primary Row - Stack on mobile, side-by-side on desktop */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-0 mb-8 lg:mb-8">
-          {/* LEFT SECTION - Logo (centered on mobile, indented on desktop) */}
-          <div className="flex flex-col items-center lg:items-start min-w-0 w-full lg:w-auto pl-0 lg:pl-[120px]">
+    <footer className="w-full bg-[#F6F7F9] overflow-x-hidden">
+      <div className="max-w-[1200px] mx-auto pl-12 sm:pl-16 lg:pl-24 pr-6 sm:pr-8 lg:pr-12 py-12 sm:py-14 lg:py-16">
+        {/* Four-column layout on desktop, stacked on mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12 lg:mb-16">
+          {/* Column 1 - Brand / Logo */}
+          <div className="flex flex-col items-center lg:items-start">
             <img 
-              src="/images/morgan_logo.png"
+              src={footerLogo}
               alt="Rebel Coaching Logo"
-              className="mb-4 w-full max-w-[180px] sm:max-w-[200px] lg:max-w-none max-h-[120px] sm:max-h-[160px] lg:max-h-[250px] h-auto object-contain"
+              className="w-auto max-w-[120px] sm:max-w-[140px] lg:max-w-[160px] max-h-[60px] sm:max-h-[70px] lg:max-h-[80px] h-auto object-contain"
             />
-            <p className="text-[#333] text-center lg:text-left text-base sm:text-lg lg:text-xl font-medium break-words">
-              Live Your Truth. Lead From Within.
-            </p>
           </div>
 
-          {/* RIGHT SECTION - Navigation, Contact, Social */}
-          <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 lg:gap-16 w-full sm:w-auto items-center sm:items-start text-center sm:text-left pr-0 lg:pr-[112px] min-w-0">
-            {/* Navigation */}
-            <div>
-              <h3 className="text-[#FF6A00] mb-3 font-medium text-base">
-                Navigation
-              </h3>
-              <ul className="space-y-2">
+          {/* Column 2 - Navigation */}
+          <div className="flex flex-col items-center lg:items-start">
+            <h3 className="text-[#FF6A00] mb-4 font-bold text-sm uppercase tracking-wider">
+              Navigation
+            </h3>
+            <ul className="space-y-2 text-center lg:text-left">
                 {['Home', 'About Dominic', 'Services', 'Results', 'Contact'].map((link) => (
                   <li key={link}>
                     <a
                       href={`#${link.toLowerCase().replace(' ', '-')}`}
-                      className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block"
+                      className="text-[#2C2C2C] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block"
                     >
                       {link}
                     </a>
                   </li>
                 ))}
-              </ul>
-            </div>
+            </ul>
+          </div>
 
-            {/* Contact */}
-            <div>
-              <h3 className="text-[#FF6A00] mb-3 font-medium text-base">
-                Contact
-              </h3>
-              <ul className="space-y-2">
+          {/* Column 3 - Contact */}
+          <div className="flex flex-col items-center lg:items-start">
+            <h3 className="text-[#FF6A00] mb-4 font-bold text-sm uppercase tracking-wider">
+              Contact
+            </h3>
+            <ul className="space-y-2 text-center lg:text-left">
                 <li>
                   <a 
                     href="mailto:ignite@rebel-coaching.ch" 
-                    className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block break-all"
+                    className="text-[#2C2C2C] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block break-all"
                   >
                     ignite@rebel-coaching.ch
                   </a>
@@ -65,7 +60,7 @@ export default function Footer() {
                 <li>
                   <a 
                     href="mailto:ignite@rebel-coaching.com" 
-                    className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block break-all"
+                    className="text-[#2C2C2C] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block break-all"
                   >
                     ignite@rebel-coaching.com
                   </a>
@@ -73,20 +68,20 @@ export default function Footer() {
                 <li>
                   <a 
                     href="tel:+41768242608" 
-                    className="text-[#333] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block"
+                    className="text-[#2C2C2C] hover:text-[#FF6A00] transition-colors duration-300 text-sm touch-manipulation py-2 sm:py-0 inline-block"
                   >
                     +41 76 824 26 08
                   </a>
                 </li>
-              </ul>
-            </div>
+            </ul>
+          </div>
 
-            {/* Connect With Me */}
-            <div>
-              <h3 className="text-[#FF6A00] mb-3 font-medium text-base">
-                Connect With Me
-              </h3>
-              <div className="grid grid-cols-3 sm:flex sm:flex-wrap gap-3 justify-center sm:justify-start">
+          {/* Column 4 - Connect With Me */}
+          <div className="flex flex-col items-center lg:items-start">
+            <h3 className="text-[#FF6A00] mb-4 font-bold text-sm uppercase tracking-wider">
+              Connect With Me
+            </h3>
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 {[
                   { icon: Facebook, href: '#', bg: '#1877F2', name: 'Facebook' },
                   { icon: Linkedin, href: '#', bg: '#0A66C2', name: 'LinkedIn' },
@@ -109,32 +104,29 @@ export default function Footer() {
                     </motion.a>
                   );
                 })}
-              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar - Stack on mobile */}
-        <div 
-          className="pt-4 mt-3"
-          style={{ borderTop: '1px solid rgba(0, 0, 0, 0.08)' }}
-        >
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-3 text-center md:text-left">
-            <p className="text-[#666] text-xs sm:text-sm order-1">
-              © 2025 Dominic Morgenthaler. All rights reserved.
+        {/* Orange divider */}
+        <div className="h-px w-full bg-[#FF6A00] mb-10 lg:mb-12" />
+
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-5 md:gap-6 text-center md:text-left">
+            <p className="text-[#2C2C2C] text-sm order-1">
+              © 2025 <span className="text-[#FF6A00] font-medium">Dominic Morgenthaler</span>, All rights reserved.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-xs sm:text-sm order-2">
-              <a href="#" className="text-[#666] hover:text-[#FF6A00] transition-colors duration-300 touch-manipulation py-2 sm:py-0">
+            <div className="flex flex-row gap-6 text-sm order-2">
+              <a href="#" className="text-[#2C2C2C] hover:text-[#FF6A00] transition-colors duration-300 touch-manipulation">
                 Privacy Policy
               </a>
-              <a href="#" className="text-[#666] hover:text-[#FF6A00] transition-colors duration-300 touch-manipulation py-2 sm:py-0">
+              <a href="#" className="text-[#2C2C2C] hover:text-[#FF6A00] transition-colors duration-300 touch-manipulation">
                 Terms of Service
               </a>
             </div>
-            <p className="text-[#666] text-xs sm:text-sm order-3 break-words">
-              Designed & Developed by <span className="text-[#FF6A00]">KATALYST CRM</span>
+            <p className="text-[#2C2C2C] text-sm order-3 break-words">
+              Designed & Developed by <span className="text-[#FF6A00] font-bold uppercase">KATALYST CRM</span>
             </p>
-          </div>
         </div>
       </div>
     </footer>

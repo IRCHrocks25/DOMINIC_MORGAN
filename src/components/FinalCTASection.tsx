@@ -1,5 +1,6 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
+import ctaBackground from '../assets/Frame 1618872901.png';
 
 export default function FinalCTASection() {
   const ref = useRef(null);
@@ -10,15 +11,16 @@ export default function FinalCTASection() {
       ref={ref} 
       id="contact" 
       className="relative w-full flex items-center justify-center text-center min-h-[400px] sm:min-h-[520px] lg:min-h-[580px] py-12 sm:py-16 lg:py-[90px] overflow-x-hidden"
-      style={{ backgroundColor: '#0A1A35' }}
+      style={{
+        backgroundImage: `url(${ctaBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#0A1A35',
+      }}
     >
-      {/* Dark Navy Base with Subtle Bright Blue Glow at Bottom Center (behind buttons) */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: 'radial-gradient(ellipse 800px 400px at center 75%, rgba(37, 99, 235, 0.25) 0%, rgba(14, 32, 67, 0.95) 50%, #0A1A35 100%)',
-        }}
-      />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-[#0A1A35]/80" />
 
       <div className="max-w-[900px] mx-auto px-5 sm:px-6 lg:px-8 relative z-10 w-full min-w-0">
         {/* Main Headline */}
@@ -81,16 +83,16 @@ export default function FinalCTASection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-8 mb-5 w-full min-w-0"
+          className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-6 mb-6 w-full min-w-0"
         >
           {/* Primary Button - Orange */}
           <motion.button
-            whileHover={{ backgroundColor: '#FF7A1A' }}
+            whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(255, 106, 0, 0.35)' }}
             whileTap={{ scale: 0.98 }}
-            className="w-full sm:w-auto min-h-[48px] sm:min-h-[56px] text-white rounded-full font-medium transition-all duration-300 px-5 sm:px-9 py-3.5 text-xs sm:text-sm md:text-base touch-manipulation whitespace-normal sm:whitespace-nowrap text-center"
+            className="w-full sm:w-auto min-h-[44px] px-6 sm:px-10 py-3.5 sm:py-4 text-white rounded-full font-semibold text-sm sm:text-base transition-all duration-300 touch-manipulation whitespace-normal sm:whitespace-nowrap text-center shadow-lg hover:shadow-2xl"
             style={{
               backgroundColor: '#FF6A00',
-              boxShadow: '0 4px 12px rgba(255, 106, 0, 0.3)',
+              boxShadow: '0 4px 20px rgba(255, 106, 0, 0.35)',
             }}
           >
             Book Your Free Matchmaker Call Today!
@@ -98,13 +100,9 @@ export default function FinalCTASection() {
           
           {/* Secondary Button - Outline */}
           <motion.button
-            whileHover={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+            whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 255, 255, 0.08)' }}
             whileTap={{ scale: 0.98 }}
-            className="w-full sm:w-auto min-h-[48px] sm:min-h-[56px] text-white rounded-full font-medium transition-all duration-300 px-5 sm:px-9 py-3.5 text-xs sm:text-sm md:text-base touch-manipulation whitespace-normal sm:whitespace-nowrap text-center"
-            style={{
-              backgroundColor: 'transparent',
-              border: '1.5px solid rgba(255, 255, 255, 0.4)',
-            }}
+            className="w-full sm:w-auto min-h-[44px] px-6 sm:px-10 py-3.5 sm:py-4 text-white rounded-full font-semibold text-sm sm:text-base transition-all duration-300 touch-manipulation whitespace-normal sm:whitespace-nowrap text-center border-2 border-white/50"
           >
             Download the Rebel Starter Pack
           </motion.button>
